@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function letschange(){
+            var value=document.getElementById('valu').value;
+            value=count(value);
+
+            var changed=document.getElementById('changed').innerHTML=value;
+
+        }
+
+        function count(time){
+            var min=0;
+            var sec=0;
+            if(time<60){
+                sec='0:'+time;
+                return sec;
+            }else{
+                var tix=0;
+                var tiy=0;
+                
+                tix=time;
+                
+                
+                
+                time=Math.floor(time/60);
+                min=time;
+                
+
+                tiy=min*60;
+                sec=tix-tiy;
+                var FT;
+                FT = min+":"+sec;
+                return FT;
+            }
+        }
+    </script>
+</head>
+<body>
+    <input id="valu" type="number">>><button onclick="letschange()">change</button>>><span id="changed" style="display: inline-block;border: 1px solid black;padding: 2px;margin-bottom: -5px;width:150px;">123</span>
+</body>
+</html>
